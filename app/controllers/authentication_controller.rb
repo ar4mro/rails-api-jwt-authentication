@@ -1,4 +1,6 @@
 class AuthenticationController < ApplicationController
+  skip_before_action :authorize_request, only: :authenticate
+
   # POST /auth/login
   def authenticate
     auth_token =
