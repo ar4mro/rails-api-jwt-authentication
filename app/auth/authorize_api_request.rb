@@ -1,4 +1,4 @@
-# Service that returns a user if the request is valid
+# Service, decodes token from header and returns user if valid
 class AuthorizeApiRequest
   def initialize(headers = {})
     @headers = headers
