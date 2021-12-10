@@ -1,4 +1,5 @@
 class AuthenticationController < ApplicationController
+  # POST /auth/login
   def authenticate
     auth_token =
       AuthenticateUser.new(auth_params[:email], auth_params[:password]).call
