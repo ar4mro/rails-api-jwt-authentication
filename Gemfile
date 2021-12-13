@@ -54,3 +54,5 @@ gem "lograge-sql", "~> 1.3"
 gem "meta_request", "~> 0.7.3"
 
 gem "jwt", "~> 2.3"
+
+gem "jsonapi-serializer", "~> 2.2"

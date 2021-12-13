@@ -24,16 +24,16 @@ module ExceptionHandler
 
   # JSON response with message; Status code 401 - unauthorized
   def unauthorized_request(exception)
-    json_response({ message: exception.message }, :unauthorized)
+    render json: { message: exception.message }, status: :unauthorized
   end
 
   # JSON response with message; Status code 404 - not found
   def four_zero_four(exception)
-    json_response({ message: exception.message }, :not_found)
+    render json: { message: exception.message }, status: :not_found
   end
 
   # JSON response with message; Status code 422 - unprocessable entity
   def four_twenty_two(exception)
-    json_response({ message: exception.message }, :unprocessable_entity)
+    render json: { message: exception.message }, status: :unprocessable_entity
   end
 end
