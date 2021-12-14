@@ -4,18 +4,21 @@ class V1::ItemsController < ApplicationController
 
   # GET /todos/:todo_id/items
   def index
-    render json: @todo.items, status: :ok
+    render json: ItemSerializer.new(@todo.items).serializable_hash.to_json,
+           status: :ok
   end
 
   # GET /todos/:todo_id/items/:id
   def show
-    render json: @item, status: :ok
+    render json: ItemSerializer.new(@item).serializable_hash.to_json,
+           status: :ok
   end
 
   # POST /todos/:todo_id/items
   def create
     @todo.items.create!(items_params)
-    render json: @todo, status: :created
+    render json: TodoSerializer.new(@todo).serializable_hash.to_json,
+           status: :created
   end
 
   # PUT /todos/:todo_id/items/:id
