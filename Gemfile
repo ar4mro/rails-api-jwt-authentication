@@ -40,9 +40,10 @@ end
 group :test do
   gem 'factory_bot_rails'
   gem 'shoulda-matchers'
-  gem 'faker'
   gem 'database_cleaner'
 end 
+
+gem 'faker'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -56,3 +57,5 @@ gem "meta_request", "~> 0.7.3"
 gem "jwt", "~> 2.3"
 
 gem "jsonapi-serializer", "~> 2.2"
+
+gem "pagy", "~> 5.6"

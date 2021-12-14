@@ -1,9 +1,10 @@
 class V1::TodosController < ApplicationController
   before_action :set_todo, only: %i[show update destroy]
+  after_action { pagy_headers_merge(@pagy) if @pagy }
 
   # GET /todos
   def index
-    @todos = current_user.todos
+    @pagy, @todos = pagy(current_user.todos)
     render json: TodoSerializer.new(@todos).serializable_hash.to_json,
            status: :ok
   end
