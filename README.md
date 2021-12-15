@@ -1,24 +1,25 @@
-# README
+## Rails API - JWT Authentication
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Basic Rails API implementation with jwt authentication, could be used as a template, includes most used api functionality and follows [JSON:API specification](https://jsonapi.org/).
 
-Things you may want to cover:
 
-* Ruby version
+<kbd><img src="https://user-images.githubusercontent.com/10157539/146101065-b7ca6cdc-9d62-4fbf-b88b-9fc676cba08c.png" /></kbd>
 
-* System dependencies
+<kbd><img src="https://user-images.githubusercontent.com/10157539/146101021-982b8859-6999-4fa8-8a48-3ffcb529f920.png" /></kbd>
 
-* Configuration
+### Features
 
-* Database creation
+- JWT Authentication from zero 
+- Authentication Specs
+- API Versioning trough mime headers
+- API Serialization using JSON:API
+- API pagination using pagy
 
-* Database initialization
+### Gems Used
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- jwt
+- jsonapi-serializer
+- pagy
+- factory_bot_rails
+- shoulda-matchers
+- faker
